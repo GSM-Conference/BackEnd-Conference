@@ -3,14 +3,14 @@
 "난 나만의 아키텍처를 설계하고 개발할거야! 히히" 라는 생각을 가진 개발자가 있어서
 같이 협업을 진행하다고 가정해보자. 그러면 아래와 같은 문제점이 발생할 것 이다.
 
-1. 나만 읽기 좋은 아키텍처는 남이 읽기 굉장한 시간이 걸린다.
+1. 나만 읽기 좋은 아키텍처는 남이 읽는데 굉장한 시간이 걸린다.
 2. IT 직군은 시간 == 돈(비용)이다.
 3. 협업하는 팀원이 하나의 요구사항을 받아서 기능을 추가하기 까지 굉장한 시간이 걸린다.
 
-![image](https://user-images.githubusercontent.com/82089918/235816389-1c3de5c5-b5ba-44e4-b92e-2472e4f82300.png)
-
 좋은 아키텍처(잘 설계한 아키텍처)를 설계하고 팀원과 협업을 진행한다면,
 남이 읽기 좋은 코드가 되어있을 것이고, 하나의 요구사항을 받아서 기능을 추가하기까지 시간이 빨라진다.
+
+![image](https://user-images.githubusercontent.com/82089918/235816389-1c3de5c5-b5ba-44e4-b92e-2472e4f82300.png)
 
 <br>
 
@@ -27,7 +27,7 @@
 
 ## 2. 의존성 결합
 
-이것은 모 개발자가 개발한 프로젝트를 가져온것이다.
+이것은 모 개발자가 개발한 프로젝트 코드를 가져온것이다.
 
 <img width="736" alt="image" src="https://user-images.githubusercontent.com/82089918/235818465-28e1f293-ad8b-48ca-9a5c-b25d7f485c13.png">
 
@@ -35,7 +35,7 @@
 
 <img width="532" alt="image" src="https://user-images.githubusercontent.com/82089918/235818566-16801ac4-c921-42b8-9724-e6822e5b3080.png">
 
-controller 계층인 presentation 계층에 있는 dto가 controller, service까지 의존하고 있다.
+presentation 계층에 있는 dto가 controller, service까지 의존하고 있다.
 이렇게 되면 presentaion인 dto를 변경하게 된다면 service의 코드까지 변경해야 한다는 불상사가 생긴다.
 
 <br>
