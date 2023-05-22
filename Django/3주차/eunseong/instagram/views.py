@@ -18,3 +18,4 @@ class GruopViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class =  GroupSerializer
     permissions_classes = [permissions.IsAuthenticated]
+
