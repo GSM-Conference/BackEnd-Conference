@@ -1,5 +1,5 @@
 from django.urls import path, include
-
+from .views import SignupView
 urlpatterns = [
-    path('registration/', include('dj_rest_auth.registration.urls')),
+    path('signup/', SignupView.as_view())
 ]
