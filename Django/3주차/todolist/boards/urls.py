@@ -6,6 +6,8 @@ app_name = 'post'
 urlpatterns = [
     path('', todolist),
     path('create/', todocreate),
+    path('make_todo/', todomake),
     path('delete/<str:id>/', tododelete),
-    path('put/<str:id>/', todoupdate)
+    path('put/<str:id>/', todoupdate),
+    path('update_todo/', todoput)
 ]

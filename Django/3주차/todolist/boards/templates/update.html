@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form name="create-form" method="POST" action='http://127.0.0.1:8000/board/put/{{ todos }}/'>
+             <input type="hidden" name="_method" value="PUT"/>
+            <input type="text" name="title" placeholder="수정할 텍스트를 입력해주세요" id="todo-input">
+            <button type="submit">수정하기</button>
+        </form>
+
+
+
+</body>
+</html>

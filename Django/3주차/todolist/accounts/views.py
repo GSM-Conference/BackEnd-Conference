@@ -9,4 +9,4 @@ class SignupView(APIView):
         user = User.objects.create_user(username=req.data['id'], password=req.data['password'])
         user.save()
         token = Token.objects.create(user=user)
-        return Response({"Token": token.key}, content_type="application/json")
+        return Response({"Token": token.key, "User": req.data['id']}, content_type="application/json")

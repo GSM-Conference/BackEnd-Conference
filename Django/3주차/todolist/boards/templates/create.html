@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% if todos %}
+    <h1>로그인 해주세요!</h1>
+{% endif %}
+    <form name="create-form" action="http://127.0.0.1:8000/board/create/" method="POST">
+            <input type="text" name="title" placeholder="할일을 입력해주세요">
+            <button type="submit">만들기</button>
+    </form>
+
+</body>
+</html>

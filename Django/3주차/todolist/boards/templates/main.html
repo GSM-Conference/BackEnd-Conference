@@ -1,9 +1,31 @@
-{% if question_list %}
-    <ul>
-    {% for question in question_list %}
-        <li><a href="/post/{{ question.id }}/">{{ question.subject }}</a></li>
+{% if todos %}
+    <h1>현재유저: {{ user }}</h1>
+    {% for i in todos %}
+        <br>
+        <button type="button" onclick="deleteElement('{{ i.id }}');">완료</button>
+        {{ i.id }}
+        {{ i.title }}
+        <button type="button"><a href="/board/update_todo?id={{ i.id }}">수정하기</a></button>
     {% endfor %}
-    </ul>
+    <br>
+
+    <button>
+        <a href="/board/make_todo"> 새로 만들기 </a>
+    </button>
 {% else %}
     <p>질문이 없습니다.</p>
 {% endif %}
+
+<script>
+    async function deleteElement(id) {
+         alert(id)
+         const response = await fetch(`http://127.0.0.1:8000/board/delete/${id}/`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            }
+         });
+         window.location.replace("http://127.0.0.1:8000/board/");
+    }
+
+</script>
